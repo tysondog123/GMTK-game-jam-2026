@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3079997270364899326}
   - component: {fileID: 7372975463067827137}
   - component: {fileID: 4641884209477372284}
-  - component: {fileID: 4360309278965346144}
+  - component: {fileID: 4376798840045934796}
   m_Layer: 0
-  m_Name: SmallLaser
+  m_Name: Big Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.01, z: 0}
-  m_LocalScale: {x: 0.17049734, y: 0.17049734, z: 0.17049734}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8512356406745932800}
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4360309278965346144
+--- !u!114 &4376798840045934796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,18 +108,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2702517051877525082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 910741f30e0ebbb41a743c904bc76aaa, type: 3}
+  m_Script: {fileID: 11500000, guid: d02c538e600fda146ad0585b05be7a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 3
-  Speed: 6
-  LifeTime: 1
+  Damage: 10
+  Speed: 1
+  LifeTime: 2
   Direction: {x: 0, y: 0, z: 0}
-  Cost: 0.01
+  Cost: 25
   Tag: 
-  ShotDelay: 0.5
-  Color: {r: 0, g: 0.30346537, b: 1, a: 1}
+  ShotDelay: 5
+  Color: {r: 0, g: 0.50524616, b: 1, a: 1}
   sprite: {fileID: 1311815749480159340}
+  Range: 10
 --- !u!1 &5065626962468162599
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +197,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0, g: 0.35159826, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

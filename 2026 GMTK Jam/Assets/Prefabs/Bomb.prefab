@@ -113,14 +113,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 5
   Speed: 1
-  LifeTime: 1
+  LifeTime: 2
   Direction: {x: 0, y: 0, z: 0}
   Cost: 2
   Tag: 
   ShotDelay: 0.5
   Color: {r: 0, g: 0.50524616, b: 1, a: 1}
   sprite: {fileID: 1311815749480159340}
-  Range: 10
+  Range: 2
 --- !u!1 &5065626962468162599
 GameObject:
   m_ObjectHideFlags: 0

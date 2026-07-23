@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FollowCursor : MonoBehaviour
 {
@@ -14,10 +16,14 @@ public class FollowCursor : MonoBehaviour
 
     public GameObject Projectile;
     bool FireDelay;
+    InputAction Attack;
+    PlayerInput input;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        input = GetComponent<PlayerInput>();
+        Attack = input.actions.FindAction("Interact");
     }
 
     // Update is called once per frame
@@ -41,7 +47,17 @@ public class FollowCursor : MonoBehaviour
     }
     public void onclick()
     {
+        StartCoroutine(HoldButton());
+    }
+    IEnumerator HoldButton()
+    {
+        Debug.Log(Attack.ReadValue<float>());
         Shoot.fireProjectile(Projectile, SpawnPoint, direction, "Enemy");
+        yield return new WaitForSeconds(0.01f);
+        if (Attack.ReadValue<float>()==1)
+        {
+            StartCoroutine(HoldButton());
+        }
     }
     
 }

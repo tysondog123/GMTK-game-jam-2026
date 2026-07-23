@@ -1,36 +1,19 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeponsSwap : MonoBehaviour
 {
-    [SerializeField]
-    GameObject[] Wepons;
+    
     [SerializeField]
     FollowCursor followCursor;
 
     bool SwapDelay =true;
-    public void Laser()
+    public void Sawp(GameObject Wepon)
     {
-        if (SwapDelay)
-        {
-            SwapDelay = false;
-            followCursor.Projectile = Wepons[0];
-            StartCoroutine(Delay());
-        }
-        
+        SwapDelay = false;
+        followCursor.Projectile = Wepon;
     }
-    public void Bomb()
-    {
-        if (SwapDelay)
-        {
-            SwapDelay = false;
-            followCursor.Projectile = Wepons[2];
-            StartCoroutine(Delay());
-        }
-    }
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(1f);
-        SwapDelay = true;
-    }
+   
+    
 }
